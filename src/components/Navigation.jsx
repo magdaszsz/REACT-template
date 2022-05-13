@@ -21,17 +21,32 @@ function Navigation() {
       <nav>
         <ul>
           <li>
-            <NavLink exact to="/" activeClassName="link-active">
+            <NavLink
+              className={(data) => (data.isActive ? "active" : "")}
+              exact
+              to="/"
+              activeClassName="link-active"
+            >
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink exact to="/skills" activeClassName="link-active">
+            <NavLink
+              className={(data) => (data.isActive ? "active" : "")}
+              exact
+              to="/skills"
+              activeClassName="link-active"
+            >
               Credentials
             </NavLink>
           </li>
           <li>
-            <NavLink exact to="/portofolio" activeClassName="link-active">
+            <NavLink
+              className={(data) => (data.isActive ? "active" : "")}
+               exact
+              to="/portofolio"
+              activeClassName="link-active"
+            >
               Authors
             </NavLink>
           </li>

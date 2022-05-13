@@ -1,19 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500&display=swap');
-
 
 :root {
---off-white: #f9f9f9;
---white: #ffffff;
---dark-bg: #1c2c2c;
---font: 'Darker Grotesque';
+  --off-white: #f9f9f9;
+  --white: #ffffff;
+  --dark-bg: #1c2c2c;
+  --font: "Darker Grotesque";
+  --lighter-red: rgb(232, 120, 123);
+  --dark-red: rgb(215, 42, 47);
 }
-
 
 body {
   background: var(--dark-bg);
@@ -33,7 +34,6 @@ body {
   place-items: center;
   padding: 3rem;
 }
-
 
 aside {
   height: 100vh;
@@ -56,11 +56,26 @@ h2 {
   font-size: 3rem;
 }
 
+li {
+  padding-block: .7rem;
+}
+
 a {
   text-decoration: none;
   color: inherit;
   text-transform: uppercase;
+  background-image: linear-gradient(120deg, var(--lighter-red) 0, var(--dark-red) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0em;
+  background-position: 0 90%;
+  transition: background-size ease-out 0.2s;
 }
 
+a:hover {
+  background-size: 100% 100%;
+}
 
-
+.link-active {
+  background-size: 100% .1em;
+  background-position: 0 100%;
+}
