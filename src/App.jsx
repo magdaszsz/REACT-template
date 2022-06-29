@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './App.css';
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Skills from "./pages/Skills";
@@ -21,13 +21,13 @@ const location = useLocation();
       </aside>
     <main>
       <AnimatePresence exitBeforeEnter initial={false}>
-        <Switch location={location} key={location.pathname}>
-          <Route path="/" exact component={Home} />
-          <Route path="/skills" component={Skills} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/portofolio" component={Portofolio} />
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home/>} />
+          <Route path="/skills" element={<Skills/>} />
+          <Route path="/contact" element={<Contact/>} />
+          <Route path="/portofolio" element={<Portofolio/>} />
    
-        </Switch>
+        </Routes>
         </AnimatePresence>
   
 
